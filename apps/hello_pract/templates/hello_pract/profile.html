@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+  </head>
+  <body>
+    <h1>My Profile:</h1>
+    <h3><a href="/company">{{company.name}} </a></h3>
+
+        {% if messages %}
+          {% for error in messages %}
+            <p>{{ error.message }}</p>
+          {% endfor %}
+        {% endif %}
+
+    <form  action="/user_score" method="post">
+       {% csrf_token %}
+
+       <label for="">Green Events :</label>
+       <select class="" name="choice">
+         <option value="Yes">Yes</option>
+          <option value="No">No</option>
+       </select>
+
+       <br>
+       <label for="">Attending An Event :</label>
+       <select class="" name="choice1">
+         <option value="Yes">Yes</option>
+          <option value="No">No</option>
+       </select>
+       <br>
+       <label for="">Organizing Committee :</label>
+       <select class="" name="choice2">
+         <option value="Yes">Yes</option>
+          <option value="No">No</option>
+       </select>
+       <br>
+       <label for="">Carpool to work :</label>
+       <select class="" name="choice3">
+         <option value="Yes">Yes</option>
+          <option value="No">No</option>
+       </select>
+       <br>
+       <input type="submit" name="" value="Submit">
+
+    </form>
+
+  </body>
+</html>
